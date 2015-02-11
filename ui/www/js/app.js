@@ -23,7 +23,7 @@ angular.module('bike', ['ionic', 'bike.controllers', 'bike.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: "/tab",
     abstract: true,
     templateUrl: "templates/tabs.html"
@@ -37,6 +37,15 @@ angular.module('bike', ['ionic', 'bike.controllers', 'bike.services'])
       'tab-stations': {
         templateUrl: 'templates/tab-stations.html',
         controller: 'StationsCtrl'
+      }
+    }
+  })
+  .state('tab.station-detail', {
+    url: '/stations/:stationId',
+    views: {
+      'tab-stations': {
+        templateUrl: 'templates/station-detail.html',
+        controller: 'StationDetailCtrl'
       }
     }
   })

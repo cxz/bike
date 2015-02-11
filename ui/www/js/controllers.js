@@ -4,7 +4,10 @@ angular.module('bike.controllers', [])
 
 .controller('StationsCtrl', function($scope, Stations) {
   $scope.stations = Stations.all();
+})
 
+.controller('StationDetailCtrl', function($scope, $stateParams, Stations) {
+  $scope.station = Stations.get($stateParams.stationId);
 })
 
 /*

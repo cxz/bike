@@ -1,0 +1,19 @@
+<ion-view view-title="{{station.name}}">
+  <ion-nav-buttons side="primary">
+    <a class="button-icon ion-arrow-left-c" ui-sref="tab.stations">
+      Stations
+    </a>
+  </ion-nav-buttons>
+  
+  <ion-content class="padding">
+    <!--
+    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+    -->
+        <h2>{{station.name}}</h2>
+        <p>{{station.title}}</p>
+        <p>{{station.description}}</p>
+        <p>{{station.available}}</p>
+        <p>{{station.free}}</p>
+        <p>{{station.status}}</p>
+  </ion-content>
+</ion-view>
