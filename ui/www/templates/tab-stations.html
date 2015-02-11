@@ -4,6 +4,10 @@
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="station in stations" type="item-text-wrap" href="#/tab/stations/{{station.id}}">
         
         <h2>{{station.name}}</h2>
+        <p>{{station.title}}</p>
+        <p>{{station.description}}</p>
+        <p>{{station.available}}</p>
+        <p>{{station.free}}</p>
         <p>{{station.status}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
