@@ -1,6 +1,9 @@
 angular.module('bike.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope) {
+  $scope.lastUpdate = new Date();
+  
+})
 
 .controller('StationsCtrl', function($scope, Stations) {
   $scope.stations = Stations.all();
