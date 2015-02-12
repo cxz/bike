@@ -1,19 +1,30 @@
 <ion-view view-title="Stations">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="station in stations" type="item-text-wrap" href="#/tab/stations/{{station.id}}">
+      <ion-item class="station-list-item item-remove-animate item-avatar item-icon-right" ng-repeat="station in stations" type="item-text-wrap" href="#/tab/stations/{{station.id}}">
         
-        <h2>{{station.name}}</h2>
-        <p>{{station.title}}</p>
-        <p>{{station.description}}</p>
-        <p>{{station.available}}</p>
-        <p>{{station.free}}</p>
-        <p>{{station.status}}</p>
+        <div class="row">
+          <div class="col-50">
+            <h2>{{station.name}}</h2>
+            <p>{{station.title}}</p>
+            <p>{{station.description}}</p>
+            <p>[{{station.status}}]</p>
+          </div>
+          
+          <div class="col-25 col-offset-10">
+            <div class="station-status">
+              <span class="badge badge-balanced">{{station.available}}</span>
+              <span class="badge badge-calm">{{station.free}}</span>
+            </div>
+          </div>
+        </div>
+        
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(station)">
           Delete
         </ion-option-button>
+        
       </ion-item>
     </ion-list>
   </ion-content>
